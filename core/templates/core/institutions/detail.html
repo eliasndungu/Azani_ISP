@@ -8,5 +8,5 @@
     <li class="list-group-item"><strong>Address:</strong> {{ institution.address }}</li>
     <li class="list-group-item"><strong>Registered:</strong> {{ institution.registration_date }}</li>
 </ul>
-<a class="btn btn-secondary" href="/institutions/">Back to list</a>
+<a class="btn btn-secondary" href="{% url 'core:institutions-list' %}">Back to list</a>
 {% endblock %}

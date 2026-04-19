@@ -1,10 +1,14 @@
 """Django settings for azani_isp project."""
 
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-kedsh)==aw^s0_-^@fqm7#!q@q_l$*^&83lkyoj-g((#%h6aa!'
+SECRET_KEY = os.getenv(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-kedsh)==aw^s0_-^@fqm7#!q@q_l$*^&83lkyoj-g((#%h6aa!',
+)
 
 DEBUG = True
 
