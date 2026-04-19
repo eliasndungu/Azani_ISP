@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="mb-3">Payments</h1>
+<table class="table table-bordered">
+    <thead><tr><th>Institution</th><th>Type</th><th>Amount</th><th>Due Date</th><th>Status</th></tr></thead>
+    <tbody>
+    {% for payment in payments %}
+        <tr>
+            <td>{{ payment.institution.name }}</td>
+            <td>{{ payment.get_payment_type_display }}</td>
+            <td>KSh {{ payment.amount }}</td>
+            <td>{{ payment.due_date }}</td>
+            <td>{{ payment.get_status_display }}</td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="5">No payments found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

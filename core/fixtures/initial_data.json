@@ -1,0 +1,78 @@
+[
+  {
+    "model": "core.bandwidthplan",
+    "pk": 1,
+    "fields": {
+      "bandwidth_mbps": 4,
+      "cost_per_month": "1200.00"
+    }
+  },
+  {
+    "model": "core.bandwidthplan",
+    "pk": 2,
+    "fields": {
+      "bandwidth_mbps": 10,
+      "cost_per_month": "2000.00"
+    }
+  },
+  {
+    "model": "core.bandwidthplan",
+    "pk": 3,
+    "fields": {
+      "bandwidth_mbps": 20,
+      "cost_per_month": "3500.00"
+    }
+  },
+  {
+    "model": "core.bandwidthplan",
+    "pk": 4,
+    "fields": {
+      "bandwidth_mbps": 25,
+      "cost_per_month": "4000.00"
+    }
+  },
+  {
+    "model": "core.bandwidthplan",
+    "pk": 5,
+    "fields": {
+      "bandwidth_mbps": 50,
+      "cost_per_month": "7000.00"
+    }
+  },
+  {
+    "model": "core.lanpricing",
+    "pk": 1,
+    "fields": {
+      "min_nodes": 2,
+      "max_nodes": 10,
+      "cost": "10000.00"
+    }
+  },
+  {
+    "model": "core.lanpricing",
+    "pk": 2,
+    "fields": {
+      "min_nodes": 11,
+      "max_nodes": 20,
+      "cost": "20000.00"
+    }
+  },
+  {
+    "model": "core.lanpricing",
+    "pk": 3,
+    "fields": {
+      "min_nodes": 21,
+      "max_nodes": 40,
+      "cost": "30000.00"
+    }
+  },
+  {
+    "model": "core.lanpricing",
+    "pk": 4,
+    "fields": {
+      "min_nodes": 41,
+      "max_nodes": 100,
+      "cost": "40000.00"
+    }
+  }
+]

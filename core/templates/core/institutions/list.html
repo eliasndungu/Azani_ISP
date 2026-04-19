@@ -1,0 +1,23 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1>Institutions</h1>
+    <a href="{% url 'core:institutions-add' %}" class="btn btn-primary">Add Institution</a>
+</div>
+<table class="table table-striped">
+    <thead><tr><th>Name</th><th>Type</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+    {% for institution in institutions %}
+        <tr>
+            <td>{{ institution.name }}</td>
+            <td>{{ institution.get_type_display }}</td>
+            <td>{{ institution.get_status_display }}</td>
+            <td><a href="{% url 'core:institutions-detail' institution.pk %}" class="btn btn-sm btn-outline-secondary">View</a></td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="4">No institutions found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="mb-4">Dashboard</h1>
+<div class="row g-3">
+    <div class="col-md-4"><div class="card"><div class="card-body"><h5>Institutions</h5><p class="display-6">{{ institution_count }}</p></div></div></div>
+    <div class="col-md-4"><div class="card"><div class="card-body"><h5>Overdue Payments</h5><p class="display-6">{{ overdue_payments_count }}</p></div></div></div>
+    <div class="col-md-4"><div class="card"><div class="card-body"><h5>Disconnected</h5><p class="display-6">{{ disconnected_count }}</p></div></div></div>
+</div>
+{% endblock %}
