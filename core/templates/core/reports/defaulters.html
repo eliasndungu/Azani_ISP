@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="mb-3">Defaulters Report</h1>
+<ul class="list-group">
+    {% for institution in institutions %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ institution.name }}
+            <span class="badge bg-danger">Overdue</span>
+        </li>
+    {% empty %}
+        <li class="list-group-item">No defaulters found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1 class="mb-3">Infrastructure Report</h1>
+<table class="table table-hover">
+    <thead><tr><th>Institution</th><th>Computers</th><th>LAN Nodes</th><th>Ready</th></tr></thead>
+    <tbody>
+    {% for infrastructure in infrastructures %}
+        <tr>
+            <td>{{ infrastructure.institution.name }}</td>
+            <td>{{ infrastructure.num_computers }}</td>
+            <td>{{ infrastructure.num_lan_nodes }}</td>
+            <td>{{ infrastructure.is_ready|yesno:'Yes,No' }}</td>
+        </tr>
+    {% empty %}
+        <tr><td colspan="4">No infrastructure records found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

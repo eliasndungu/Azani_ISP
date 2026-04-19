@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<h1>{{ institution.name }}</h1>
+<ul class="list-group mb-3">
+    <li class="list-group-item"><strong>Type:</strong> {{ institution.get_type_display }}</li>
+    <li class="list-group-item"><strong>Status:</strong> {{ institution.get_status_display }}</li>
+    <li class="list-group-item"><strong>Address:</strong> {{ institution.address }}</li>
+    <li class="list-group-item"><strong>Registered:</strong> {{ institution.registration_date }}</li>
+</ul>
+<a class="btn btn-secondary" href="/institutions/">Back to list</a>
+{% endblock %}
